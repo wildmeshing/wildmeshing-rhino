@@ -37,7 +37,7 @@ add_subdirectory(${THIRD_PARTY_DIR}/bindings)
 ################################################################################
 # Subdirectories
 ################################################################################
-add_library(wildmeshing-rhino MODULE
+add_library(wildmeshing-rhino SHARED
 	${THIRD_PARTY_DIR}/bindings/src/Utils.cpp ${THIRD_PARTY_DIR}/bindings/src/Utils.hpp
 
 	# ${THIRD_PARTY_DIR}/bindings/src/triangulate_data.hpp ${THIRD_PARTY_DIR}/bindings/src/triangulate_data.cpp
