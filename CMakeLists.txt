@@ -2,7 +2,7 @@
 cmake_minimum_required(VERSION 3.1)
 project(WildMeshingRhino)
 ################################################################################
-
+option(FLOAT_TETWILD_WITH_EXACT_ENVELOPE    "Use exact envelope"        ON)
 
 set(THIRD_PARTY_DIR ${CMAKE_CURRENT_SOURCE_DIR}/3rdparty/)
 list(APPEND CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/cmake)
@@ -30,8 +30,9 @@ list(REMOVE_DUPLICATES CMAKE_MODULE_PATH)
 include(DownloadExternal)
 
 wildmeshing_download_bindings()
-add_subdirectory(${THIRD_PARTY_DIR}/bindings)
-# add_subdirectory(${THIRD_PARTY_DIR}/bindings/3rdparty/tetwild)
+# add_subdirectory(${THIRD_PARTY_DIR}/bindings)
+wildmeshing_download_tetwild()
+add_subdirectory(${THIRD_PARTY_DIR}/tetwild)
 
 
 ################################################################################
@@ -45,7 +46,7 @@ add_library(wildmeshing-rhino SHARED
 
 	${THIRD_PARTY_DIR}/bindings/src/tetrahedralize.cpp ${THIRD_PARTY_DIR}/bindings/src/tetrahedralize.hpp)
 
-target_sources(wildmeshing-rhino PRIVATE src/Rhino-Binding.cpp)
+target_sources(wildmeshing-rhino PRIVATE src/Rhino-Binding.cpp src/Rhino-Binding.hpp)
 
 target_include_directories(wildmeshing-rhino PRIVATE ${THIRD_PARTY_DIR}/bindings/src)
 # target_include_directories(wildmeshing-rhino PRIVATE ${THIRD_PARTY_DIR}/bindings/triwild/src)
