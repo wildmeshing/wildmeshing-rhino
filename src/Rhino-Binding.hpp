@@ -40,7 +40,7 @@ namespace wildmeshing_rhino
                               bool allMesh = false);
 
         FTETWRAP void DelTet(wildmeshing_binding::Tetrahedralizer *tet);
-        FTETWRAP void DelTris(int *array);
-        FTETWRAP void DelVerts(float *array);
+        // FTETWRAP void DelTris(int *array);
+        // FTETWRAP void DelVerts(float *array);
     }
 } // namespace wildmeshing_rhino
