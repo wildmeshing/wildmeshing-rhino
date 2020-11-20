@@ -72,3 +72,9 @@ jobs:
             -S .
           cd build
           ninja -j1
+
+      - name: deploy
+        uses: actions/upload-artifact@v2
+        with:
+          name: wildmeshing-rhino ${{ matrix.config }}
+          path: build/wildmeshing-rhino.dll
