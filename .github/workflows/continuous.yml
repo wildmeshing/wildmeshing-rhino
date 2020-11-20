@@ -47,6 +47,7 @@ jobs:
       - uses: seanmiddleditch/gha-setup-ninja@master
 
       - name: Set env
+        run: |
           echo "GMP_INC=C:\Miniconda\Library\include" >> ${env:GITHUB_ENV}
           echo "GMP_LIB=C:\Miniconda\Library\lib" >> ${env:GITHUB_ENV}
           echo "appdata=$env:LOCALAPPDATA" >> ${env:GITHUB_ENV}
