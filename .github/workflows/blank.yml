@@ -40,6 +40,12 @@ jobs:
           fetch-depth: 10
       - uses: seanmiddleditch/gha-setup-ninja@master
 
+      - name: Set env
+        run: |
+          echo "GMP_INC=C:\Miniconda\Library\include" >> ${env:GITHUB_ENV}
+          echo "GMP_LIB=C:\Miniconda\Library\lib" >> ${env:GITHUB_ENV}
+          echo "appdata=$env:LOCALAPPDATA" >> ${env:GITHUB_ENV}
+
       - name: Cache build
         id: cache-build
         uses: actions/cache@v1
