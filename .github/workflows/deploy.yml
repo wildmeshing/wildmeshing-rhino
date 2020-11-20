@@ -1,12 +1,10 @@
-name: Build
+name: Deploy
 
 on:
   push:
-    branches:
-      - master
+    branches: [main]
   pull_request:
-    branches:
-      - master
+    branches: [main]
 
 env:
   CTEST_OUTPUT_ON_FAILURE: ON
