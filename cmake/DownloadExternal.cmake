@@ -27,7 +27,7 @@ endfunction()
 function(wildmeshing_download_bindings)
     wildmeshing_download_project(bindings
         GIT_REPOSITORY https://github.com/wildmeshing/wildmeshing-python.git
-        GIT_TAG        6a41901c31c60c02a58ca78e4e93bcfa89a59198
+        GIT_TAG        ec2445468a39a3fbcb0b3b19039c5f6ba016b39c
     )
 endfunction()
 
@@ -35,13 +35,13 @@ endfunction()
 function(wildmeshing_download_triwild)
     wildmeshing_download_project(triwild
         GIT_REPOSITORY  https://github.com/wildmeshing/TriWild
-        GIT_TAG         a69ef125e5c6e336f1bd982afadefbc87a92398e
+        GIT_TAG         8e9e5ea25b11b346ddb8db8746174153259807d4
     )
 endfunction()
 
 function(wildmeshing_download_tetwild)
     wildmeshing_download_project(tetwild
         GIT_REPOSITORY  https://github.com/wildmeshing/fTetWild
-        GIT_TAG         9ce357a936f7bade5a96fb2cbb43ed34a99d40a6
+        GIT_TAG         427206bc770452b57ae0b143d0e714d243e01848
     )
 endfunction()
