@@ -13,10 +13,6 @@ env:
   CTEST_PARALLEL_LEVEL: 2
 
 jobs:
-  ####################
-  # Windows
-  ####################
-
   Windows:
     name: Windows (${{ matrix.config }})
     runs-on: windows-2019
