@@ -6,8 +6,6 @@ on:
   pull_request:
     branches: [main]
 
-workflow_dispatch:
-
 env:
   CTEST_OUTPUT_ON_FAILURE: ON
   CTEST_PARALLEL_LEVEL: 2
